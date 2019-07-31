@@ -6,19 +6,20 @@
 -->
 <html>
 	<head>
-		<title>Sign Up</title>
+		<title>Contact - Alpha by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
+					<h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="/index">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Layouts</a>
 								<ul>
@@ -44,33 +45,30 @@
 			<!-- Main -->
 				<section id="main" class="container medium">
 					<header>
-						<h2>Create an Account!</h2>
-						<p>Begin your finacial journey, create your account.</p>
+						<h2>Contact Us</h2>
+						<p>Tell us what you think about our little operation.</p>
 					</header>
 					<div class="box">
-				       <form method="POST" action="/signup">
-					       <!--{{message}}-->
-					      <h4>Create an account</h4>
-					      <form method='POST' action ='/signup'>
-					        First Name:
-					        <input type= 'text' name= 'first-name'>
-					        <br>
-					        Last Name:
-					        <input type= 'text' name= 'last-name'>
-					        <br>
-					        Verified Email:
-					        <input type= 'text' name= 'email'>
-					        <br>
-					        Username:
-					        <input type='text' name='username'>
-					        <br>
-					        Password:
-					        <input type='text' name='password'>
-					        <br>
-					        <input type='submit' value = 'Submit'>
-					        <br>
-					        <br>
-					        <a href="/" class="button">Home</a>  
+						<form method="post" action="#">
+							<div class="row gtr-50 gtr-uniform">
+								<div class="col-6 col-12-mobilep">
+									<input type="text" name="name" id="name" value="" placeholder="Name" />
+								</div>
+								<div class="col-6 col-12-mobilep">
+									<input type="email" name="email" id="email" value="" placeholder="Email" />
+								</div>
+								<div class="col-12">
+									<input type="text" name="subject" id="subject" value="" placeholder="Subject" />
+								</div>
+								<div class="col-12">
+									<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions special">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
+								</div>
+							</div>
 						</form>
 					</div>
 				</section>
@@ -93,13 +91,13 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="/static/assets/js/jquery.min.js"></script>
-			<script src="/static/assets/js/jquery.dropotron.min.js"></script>
-			<script src="/static/assets/js/jquery.scrollex.min.js"></script>
-			<script src="/static/assets/js/browser.min.js"></script>
-			<script src="/static/assets/js/breakpoints.min.js"></script>
-			<script src="/static/assets/js/util.js"></script>
-			<script src="/static/assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

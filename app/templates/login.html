@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Sign Up</title>
+		<title>Log In</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/static/assets/css/main.css" />
@@ -18,7 +18,7 @@
 				<header id="header">
 					<nav id="nav">
 						<ul>
-							<li><a href="/index">Home</a></li>
+							<li><a href="/">Home</a></li>
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Layouts</a>
 								<ul>
@@ -44,33 +44,31 @@
 			<!-- Main -->
 				<section id="main" class="container medium">
 					<header>
-						<h2>Create an Account!</h2>
-						<p>Begin your finacial journey, create your account.</p>
+						<h2>Log In</h2>
+						<p>To coutinue your experience, login now.</p>
 					</header>
 					<div class="box">
-				       <form method="POST" action="/signup">
 					       <!--{{message}}-->
-					      <h4>Create an account</h4>
-					      <form method='POST' action ='/signup'>
-					        First Name:
-					        <input type= 'text' name= 'first-name'>
-					        <br>
-					        Last Name:
-					        <input type= 'text' name= 'last-name'>
-					        <br>
-					        Verified Email:
-					        <input type= 'text' name= 'email'>
-					        <br>
+					      <h3>Create an Account</h4>
+					      <form method='POST' action ='/login'>
+					         {% if 'username' not in session: %}
+					      <h1>Log in to your Account</h1>
+					      <form method='POST' action ='/login'>
 					        Username:
 					        <input type='text' name='username'>
-					        <br>
 					        Password:
 					        <input type='text' name='password'>
 					        <br>
 					        <input type='submit' value = 'Submit'>
 					        <br>
 					        <br>
-					        <a href="/" class="button">Home</a>  
+					        <br>
+					      <p>No account? Sign up here!<a href= "/signup">   Create an Account</a></p>
+					      {% else %}
+					      <p>You are currently logged in as {{session['username']}}</p>
+					      <a href= '/logout'>Log out</a>
+					      {% endif %}
+					    	</body>
 						</form>
 					</div>
 				</section>
