@@ -18,7 +18,7 @@
 				<header id="header">
 					<nav id="nav">
 						<ul>
-							<li><a href="/">Home</a></li>
+							<li><a href="/index">Home</a></li>
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Layouts</a>
 								<ul>
@@ -49,13 +49,13 @@
 					</header>
 					<div class="box">
 					       <!--{{message}}-->
-					      <h3>Create an Account</h4>
 					      <form method='POST' action ='/login'>
 					         {% if 'username' not in session: %}
-					      <h1>Log in to your Account</h1>
+					      <h3>Log in to your Account</h3>
 					      <form method='POST' action ='/login'>
 					        Username:
 					        <input type='text' name='username'>
+					        <br>
 					        Password:
 					        <input type='text' name='password'>
 					        <br>

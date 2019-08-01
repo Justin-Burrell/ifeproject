@@ -7,6 +7,7 @@
 <html>
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
 	</style>
 	<head>
 		<title>Welcome!</title>
@@ -21,11 +22,11 @@
 				<header id="header" class="alt">
 					<nav id="nav">
 						<ul>
-							<li><a href="'/">Home</a></li>
+							<li><a href="/">Home</a></li>
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Layouts</a>
 								<ul>
-									<li><a href="generic.html">Generic</a></li>
+									<li><a href="finaces.html">Finance</a></li>
 									<li><a href="contact.html">Contact</a></li>
 									<li><a href="elements.html">Elements</a></li>
 									<li>
@@ -39,14 +40,19 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="/signup" class="button">Sign Up</a></li>
+							<li><a href="/login" class="button">Welcome
+							{% if 'username' in session: %} {{session['username']}} {% endif %} 
+						</a></li>
+							
 						</ul>
 					</nav>
 				</header>
 
 			<!-- Banner -->
 				<section id="banner">
-					<h2>éDuctu</h2>
+					<h2 style = "font-family:Permanent Marker;font-size:90px">
+					<p>éDuctu</p>
+					<h2 style = "font-family:Permanent Marker;font-size:16px;font-style:italic;">
 					<p>Making your future our bussiness!</p>
 					<ul class="actions special">
 						<li><a href="/signup" class="button primary">Sign Up</a></li>
@@ -62,8 +68,6 @@
 							<h2>Introducing the ultimate finace app
 							<br />
 							for managing money on your phone!</h2>
-							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
 						</header>
 						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
 					</section>
@@ -89,8 +93,8 @@
 							</section>
 							<section>
 								<span class="icon solid major fa-lock accent5"></span>
-								<h3></h3>
-								<p></p>
+								<h3>Subscription</h3>
+								<p>You can buy either the school package; allowing your students to reap the benefits of éDuctu, and giving you admin access to your users, the individual package; which is for one user, or the family package, allowing the whole household to be financially stable. </p>
 							</section>
 						</div>
 					</section>
@@ -100,10 +104,10 @@
 
 							<section class="box special">
 								<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-								<h3>Quae Magis</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<h3>Our Mission</h3>
+								<p>We value trasnparency and a strong relationship between the consumer and the business. Find out more about our mission and vision statement.</p>
 								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
+									<li><a href="/missionstatement" class="button alt">Learn More</a></li>
 								</ul>
 							</section>
 
@@ -127,8 +131,8 @@
 			<!-- CTA -->
 				<section id="cta">
 
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
+					<h2>Subscribe Now!</h2>
+					<p>We will email you with information to purchase éDuctu for your school, your family, or yourself. You're just a click away!</p>
 
 					<form>
 						<div class="row gtr-50 gtr-uniform">
@@ -136,7 +140,7 @@
 								<input type="email" name="email" id="email" placeholder="Email Address" />
 							</div>
 							<div class="col-4 col-12-mobilep">
-								<input type="submit" value="Sign Up" class="fit" />
+								<input type="submit" value="Enter" class="fit" />
 							</div>
 						</div>
 					</form>

@@ -3158,20 +3158,21 @@
 				z-index: 0;
 			}
 
-/* Banner */
+/* : */
 
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/phoneuserforIFEproject.jpg"), url("../../images/phoneuserforIFEproject.jpg");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
-		background-size: auto,							cover;
+		background-size:							cover;
 		color: #fff;
 		padding: 12em 0 20em 0;
 		text-align: center;
+		background-image: opacity: 0.50;
 	}
-
+	
 		#banner :last-child {
 			margin-bottom: 0;
 		}
@@ -3196,7 +3197,7 @@
 		#banner input[type="reset"],
 		#banner input[type="button"],
 		#banner .button {
-			background-color: transparent;
+			background-color: #d1001c;
 			box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
 			color: #fff;
 			min-width: 12em;
@@ -3894,5 +3895,7 @@
 			#cta {
 				padding: 2.5em 1em 3em 1em;
 			}
+
+	}
 
 	}
