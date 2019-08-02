@@ -61,14 +61,18 @@ def login():
         if existing_user: 
           # check if the password is right
           if existing_user['password'] == request.form['password'] :
-              session['username'] = request.form['username'],
+              session['username'] = request.form['username']
+              username= str(session['username'])
+              print(username)
               return redirect(url_for('index'))
           else:
-              return "Invalid username or password. Try again"
+              message = "Incorrect username or password. Please try again."
+              return render_template('login.html', message= message)
         else:
-            return "There is no user with that usermame. Try making an account."
+            message = "There is no user with that usermame. Try making an account."
+            return render_template('login.html', message= message)
     else:
-        return render_template('login.html')
+        return render_template('login.html', message= "")
             
         
 #Log Out:
@@ -100,3 +104,30 @@ def finaces():
         tasks= tasks.find()
         # return a message to the user
         return render_template('finances.html', tasks=tasks)
+
+#Customers
+@app.route('/customer')
+def customer():
+    return render_template('customer.html')
+    
+#Contact
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+#Subcription
+@app.route('/subscription', methods = ['GET', 'POST'])
+def subscription():
+    if request.method =="POST":
+        #take in the info they gave us, check if username is taken, if username is available, put into a databse of users
+        subscription= mongo.db.subscription
+        existing_subscription = subscription.find_one({"organization":request.form["organization"]})
+        if existing_subscription is None:
+            subscription.insert({"package":request.form['package'], "organization":request.form['organization'], "cardtype":request.form['cardtype'], "cardholder-name":request.form['cardholder-name'], 'card-number':request.form['card-number'], 'expiration-date':request.form['expiration-date'], 'zip-code':request.form['zip-code']})
+            return render_template('subscriptionsuccessful.html')
+        else:
+            message = "There is already an account associated with this organization. Please ask an administrator or use a different organization."
+            return render_template('subscription.html', message= message)
+    else:   
+        return render_template('subscription.html', message= "")
+        

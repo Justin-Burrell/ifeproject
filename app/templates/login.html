@@ -22,7 +22,7 @@
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Layouts</a>
 								<ul>
-									<li><a href="generic.html">Generic</a></li>
+									<li><a href="/finances">Finances</a></li>
 									<li><a href="contact.html">Contact</a></li>
 									<li><a href="elements.html">Elements</a></li>
 									<li>
@@ -36,7 +36,9 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
+						   <li><a href="/login" class="button">Welcome
+					    		{% if 'username' in session: %} {{session['username']}} {% endif %} 
+							</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -48,16 +50,16 @@
 						<p>To coutinue your experience, login now.</p>
 					</header>
 					<div class="box">
-					       <!--{{message}}-->
 					      <form method='POST' action ='/login'>
 					         {% if 'username' not in session: %}
 					      <h3>Log in to your Account</h3>
+					      <p><b>{{message}}</p></b>
 					      <form method='POST' action ='/login'>
 					        Username:
 					        <input type='text' name='username'>
 					        <br>
 					        Password:
-					        <input type='text' name='password'>
+					        <input type='password' name='password'>
 					        <br>
 					        <input type='submit' value = 'Submit'>
 					        <br>

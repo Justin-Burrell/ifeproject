@@ -7,7 +7,6 @@
 <html>
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-
 	</style>
 	<head>
 		<title>Welcome!</title>
@@ -26,7 +25,7 @@
 							<li>
 								<a href="#" class="icon solid fa-angle-down">Layouts</a>
 								<ul>
-									<li><a href="finaces.html">Finance</a></li>
+									<li><a href="/finaces">Finance</a></li>
 									<li><a href="contact.html">Contact</a></li>
 									<li><a href="elements.html">Elements</a></li>
 									<li>
@@ -41,7 +40,7 @@
 								</ul>
 							</li>
 							<li><a href="/login" class="button">Welcome
-							{% if 'username' in session: %} {{session['username']}} {% endif %} 
+							{% if 'username' in session: %} {{session.username}} {% endif %} 
 						</a></li>
 							
 						</ul>
@@ -51,13 +50,21 @@
 			<!-- Banner -->
 				<section id="banner">
 					<h2 style = "font-family:Permanent Marker;font-size:90px">
-					<p>éDuctu</p>
+					<p>ÉDuctu</p>
 					<h2 style = "font-family:Permanent Marker;font-size:16px;font-style:italic;">
 					<p>Making your future our bussiness!</p>
+					{% if 'username' not in session:%} 
 					<ul class="actions special">
 						<li><a href="/signup" class="button primary">Sign Up</a></li>
 						<li><a href="/login" class="button">Log In</a></li>
 					</ul>
+					{% else %}
+					<ul class="actions special">
+						<li><a href="/finances" class="button primary">Your Finances!</a></li>
+						<li><a href="/contact" class="button">Contact Us!</a></li>
+					</ul>
+					{% endif %}
+					
 				</section>
 
 			<!-- Main -->
@@ -77,7 +84,7 @@
 							<section>
 								<span class="icon solid major fa-bolt accent2"></span>
 								<h3>Manage Money</h3>
-								<p>Link your banking account to éDuctu, allowing you to see how much you have, and be able to budget for monthly nessecities.</p>
+								<p>Link your banking account to ÉDuctu, allowing you to see how much you have, and be able to budget for monthly nessecities.</p>
 							</section>
 							<section>
 								<span class="icon solid major fa-chart-area accent3"></span>
@@ -94,7 +101,7 @@
 							<section>
 								<span class="icon solid major fa-lock accent5"></span>
 								<h3>Subscription</h3>
-								<p>You can buy either the school package; allowing your students to reap the benefits of éDuctu, and giving you admin access to your users, the individual package; which is for one user, or the family package, allowing the whole household to be financially stable. </p>
+								<p>You can buy either the school package; allowing your students to reap the benefits of ÉDuctu, and giving you admin access to your users, the individual package; which is for one user, or the family package, allowing the whole household to be financially stable. </p>
 							</section>
 						</div>
 					</section>
@@ -116,10 +123,10 @@
 
 							<section class="box special">
 								<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
-								<h3>Accumsan integer</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<h3>Why ÉDuctu?</h3>
+								<p>Milienials are in finacal crisis, and we <i>are</i> the solution. Click here to find out.</p>
 								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
+									<li><a href="/customer" class="button alt">Learn More</a></li>
 								</ul>
 							</section>
 
@@ -132,18 +139,19 @@
 				<section id="cta">
 
 					<h2>Subscribe Now!</h2>
-					<p>We will email you with information to purchase éDuctu for your school, your family, or yourself. You're just a click away!</p>
-
-					<form>
-						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12-mobilep">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
-							</div>
-							<div class="col-4 col-12-mobilep">
-								<input type="submit" value="Enter" class="fit" />
-							</div>
-						</div>
-					</form>
+					<p>We will email you with information to purchase ÉDuctu for your school, your family, or yourself. You're just a click away!</p>
+					<a href="/subscription" id="subscriptionbutton" class="button">Buy Now!</a>
+					
+					<!--<form>-->
+					<!--	<div class="row gtr-50 gtr-uniform">-->
+					<!--		<div class="col-8 col-12-mobilep">-->
+					<!--			<input type="email" name="email" id="email" placeholder="Email Address" />-->
+					<!--		</div>-->
+					<!--		<div class="col-4 col-12-mobilep">-->
+					<!--			<input type="submit" value="Enter" class="fit" />-->
+					<!--		</div>-->
+					<!--	</div>-->
+					<!--</form>-->
 
 				</section>
 

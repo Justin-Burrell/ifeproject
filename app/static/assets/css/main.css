@@ -1,5 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
 /*
 	Alpha by HTML5 UP
@@ -38,7 +39,10 @@
 	body {
 		line-height: 1;
 	}
-
+	#subscriptionbutton {
+		color:black;
+		font-family: Permanent Marker;
+	}
 	ol, ul {
 		list-style: none;
 	}

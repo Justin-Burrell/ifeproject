@@ -36,7 +36,9 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
+							<li><a href="/login" class="button">Welcome
+								{% if 'username' in session: %} {{session['username']}} {% endif %} 
+							</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -44,13 +46,14 @@
 			<!-- Main -->
 				<section id="main" class="container medium">
 					<header>
-						<h2>Create an Account!</h2>
+						<h3>Create an Account!</h3>
 						<p>Begin your finacial journey, create your account.</p>
 					</header>
 					<div class="box">
 				       <form method="POST" action="/signup">
 					       <!--{{message}}-->
-					      <h4>Create an account</h4>
+					      <h2>Create an account</h2>
+					      <p><b>{{message}}</p></b>
 					      <form method='POST' action ='/signup'>
 					        First Name:
 					        <input type= 'text' name= 'first-name'>

@@ -7,28 +7,13 @@
 <html>
 
 <head>
-	<title>Your Account</title>
+	<title>Customers' Value</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="/static/assets/css/main.css" />
 	<style>
-	
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-    #shape {
-    	text-align:center;
-        vertical-align:center;
-        line-height:200px;
-    	border-radius:50%;
-        height:200px;
-        width:200px;
-        background-color:#FF4500;
-        font-family:Permanent Marker;
-        font-size: 40px;
-        color:white;
-        display:flex;
-        align-items: center;
-        }
-        
+		.box {
+			display: block;
 	</style>
 </head>
 
@@ -57,8 +42,8 @@
 							</li>
 						</ul>
 					</li>
-				    <li><a href="/login" class="button">Welcome
-					    {% if 'username' in session: %} {{session['username']}} {% endif %} 
+					<li><a href="/login" class="button">Welcome
+						{% if 'username' in session: %} {{session['username']}} {% endif %} 
 					</a></li>
 				</ul>
 			</nav>
@@ -66,38 +51,29 @@
 
 		<!-- Main -->
 		<section id="main" class="container medium">
-		    <header>
-			<h2>Finances!</h2>
+			<header>
+				<h2>Customer Discovery and Satisfaction</h2>
 			</header>
-    			<div class= "box">
-    				<div style= display:flex;align-items:center id= "smallerbox">
-	        			<div style= display:flex;align-items:center id= "shape"
-	        			    <h3>$1,500</h3>
-	        			</div>
-        			</div>
-        			<br>
+			<div class="box">
+				<!--{{message}}-->
+				<h3>How we Support our Demographic</h3>
+				<p>eDuctu’s goal is to guide the next generation of leaders to financial security. eDuctu provides online financial advice for people that need help with budgeting and managing their finances. In the future we hope to donate 10% of our profits to donations such as Prep for Prep to help underprivileged youth achieve higher education. We want young adults to be financially secure so they could pursue their passions without having to worry about their finances. In order to have an healthy and educated society we must give the next generation room to grow and prosper without being held back by something out of their control.</p>
+				<img style= 'height: 100%; width: 100%; object-fit: contain' id="talkingwithadvisor" src="static/assets/css/images/talkingwithfinancialadvisorIFEproject.jpg">
+				
+				<br>
+				<br>
+				<br>
+				
+				<h3>How ÉDuctu benefits its Users</h3>
+				<p></p>
+				<img style= 'height: 100%; width: 100%; object-fit: contain' id="youngadultusingphone" src="static/assets/css/images/youngadultusingphone.jpg"
 
-        			<p>You have $1,500 in your account. Based off of your information, you spend on average $131 on food per week, a monthly fee of $524 for food, and a monthly fee of $87 for your Verizon Wireless plan.</p>
-        			
-        	        <h2>Objectives</h2>
-        	        <ul>
-                  {% for task in tasks %}
-                    <li style= "color: black">{{ task.task }} - {{ task.duedate }}  </li>
-                  {% endfor %}
-                    </ul>
-                   <form method="POST" action="/finances">
-                      <label for="task">Objective:</label>
-                      <input type="text" name="task" value="">
-                      <br>
-                      <label for="duedate">Due Date:</label>
-                      <input type="text" name="duedate" value="">
-                      <br>
-                      <input type="submit" value="Submit">
-                    </form>
-                    <a href ="/" class="button">Home</a>
-        			</div>
-        		
-			
+				<br>
+				<br>
+				<br>
+				<br>
+				
+				<a href ="/" class="button">Home</a>
 			</div>
 		</section>
 
