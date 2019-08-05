@@ -2798,6 +2798,11 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+ 		/*display: block;*/
+  	/*	max-width: 150px;*/
+  	/*	margin: auto;*/
+
+}
 	}
 
 		input[type="submit"]:hover,
