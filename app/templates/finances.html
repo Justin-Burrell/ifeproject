@@ -11,25 +11,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="/static/assets/css/main.css" />
-	<style>
-	
+
+<style>
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-    #shape {
-    	text-align:center;
-        vertical-align:center;
-        line-height:200px;
-    	border-radius:50%;
-        height:200px;
-        width:200px;
-        background-color:#FF4500;
-        font-family:Permanent Marker;
-        font-size: 40px;
-        color:white;
-        display:flex;
-        align-items: center;
-        }
-        
-	</style>
+</style>
+
 </head>
 
 <body class="is-preload">
@@ -70,30 +56,24 @@
 					  <p class="cardtitle">Majors in Computer Science</p>
 					  <p>The City of College of New York</p>
 					</div>
-					
-    				<div  id= "smallerbox">
-	        			<div  id= "shape"
-	        			    <h3>$1,500</h3>
-	        			</div>
-        			</div>
+					<h3>Your Bank Account has <b><i>$1,500</i></b> in it.</h3>
+    				<!--<div  id= "smallerbox">-->
+	       <!-- 			<div  id= "shape"-->
+	       <!-- 			    <h3>$1,500</h3>-->
+	       <!-- 			</div>-->
+        <!--			</div>-->
         			<br>
-        			<br>
-        			<br>
-        			<br>
-        			<br>
-        			<br>
-        			
         			<h2>ÉDuctu Analysis™</h2>
-        			<p>You have $1,500 in your account. Based off of your information, you spend on average $131 on food per week, a monthly fee of $524 for food, and a monthly fee of $87 for your Verizon Wireless plan.</p>
+        			<p>You have $1,500 in your account. Based off of your information, you spend on average $131 on food per week, a monthly fee of $524 for food, and a monthly fee of $87 for your Verizon Wireless plan. With a yearly income of $10,500 from your part-time job at "Mark and Marie's Grocery," you have a monthly income of $875. Your monthly income covers the $742 costs for your <b>monthly essentials.</b> We suggest that you save 65% of your $135, $87, into your Housing at The City of College of New York due on January 1. You have $48 to spend on what you chose. Perhaps you can achieve some of your Goals.</p>
         			
-        	        <h2>Objectives</h2>
+        	        <h2>Goals</h2>
         	        <ul>
                   {% for task in tasks %}
                     <li style= "color: black">{{ task.task }} - {{ task.duedate }}  </li>
                   {% endfor %}
                     </ul>
                    <form method="POST" action="/finances">
-                      <label for="task">Objective:</label>
+                      <label for="task">Goal:</label>
                       <input type="text" name="task" value="">
                       <br>
                       <label for="duedate">Due Date:</label>
