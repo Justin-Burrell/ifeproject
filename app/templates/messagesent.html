@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Sign Up</title>
+		<title>Message Sent</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/static/assets/css/main.css" />
@@ -29,8 +29,8 @@
 						</ul>
 					</li>
 							<li><a href="/login" class="button">Welcome
-								{% if 'username' in session: %} {{session.username}} {% endif %}
-							</li></a>
+						        {% if 'username' in session: %} {{session['username']}} {% endif %} 
+					        </a></li>
 						</ul>
 					</nav>
 				</header>
@@ -38,16 +38,12 @@
 			<!-- Main -->
 				<section id="main" class="container medium">
 					<header>
-						<h2>Account Created!</h2>
-						<p>You are one step closer to living the life you deserve!</p>
+						<h2>Message Sent</h2>
+						<p>You are making ÉDuctu a better service!</p>
 					</header>
 					<div class="box">
 				       <form method="POST" action="/signup">
-					       <!--{{message}}-->
-					        <h4>Let's Get Started!</h4>
-					        <p>We will send you a confirmation email, where you can also choose if you would like to recieve reminder emails or text about your finace. But in the meantime, enjoy your use of éDuctu!</p>
-					        <br>
-					        <br>
+				           <p>We appreciate your message and we will take this into consideration. Thank you.</p>
 					        <a href="/" class="button">Home</a>  
 						</form>
 					</div>

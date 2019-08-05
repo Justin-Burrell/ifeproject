@@ -113,7 +113,7 @@ def customer():
 #Contact
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+        return render_template('contact.html')
 
 #Subcription
 @app.route('/subscription', methods = ['GET', 'POST'])
@@ -130,4 +130,9 @@ def subscription():
             return render_template('subscription.html', message= message)
     else:   
         return render_template('subscription.html', message= "")
+        
+#Message Sent
+@app.route('/messagesent')
+def messagesent():
+    return render_template('messagesent.html')
         
